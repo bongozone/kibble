@@ -38,10 +38,11 @@ I connect to NYCMesh [Node 1340](https://docs.nycmesh.net/nodes/node-1340/).
 ### Install packages with `pkg_add` 
 
 ```bash
-pkg_add alpine arpwatch bash coreutils curl git go w3m iperf3 irssi keybase lynx miniupnpd nmap rsync the_silver_searcher tmux-mem-cpu-load vim wget zsh
+pkg_add alpine arpwatch bash coreutils curl git go iperf3 irssi keybase lynx \
+    miniupnpd nmap rsync the_silver_searcher tmux-mem-cpu-load vim w3m wget zsh
 ```
 
-__Try to populate from `/var/backups/pkglist.current`__
+_Try to populate from `/var/backups/pkglist.current`_
 
 ## Features
 
