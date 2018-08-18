@@ -1,5 +1,5 @@
 # [kibble.bongo.zone](https://kibble.bongo.zone/)
-My OpenBSD gateway configuration, connected to [NYCMesh](https://nycmesh.net). Inteded as a how-to guide, in case I ever break this thing.
+My OpenBSD gateway configuration, connected to [NYCMesh](https://nycmesh.net). Intended as a how-to guide, in case I ever break this thing.
 
 * [dmesg](http://dmesgd.nycbug.org/index.cgi?do=view&id=3701)
 * [Todo items](https://github.com/bongozone/kibble/issues)
@@ -38,10 +38,10 @@ I connect to NYCMesh [Node 1340](https://docs.nycmesh.net/nodes/node-1340/).
 ### Install packages with `pkg_add` 
 
 ```bash
-pkg_add alpine arpwatch bash coreutils curl git go intel iperf3 irssi keybase lynx miniupnpd nmap rsync the_silver_searcher tmux-mem-cpu-load vim wget zsh
+pkg_add alpine arpwatch bash coreutils curl git go w3m iperf3 irssi keybase lynx miniupnpd nmap rsync the_silver_searcher tmux-mem-cpu-load vim wget zsh
 ```
 
-**Try to populate from `/var/backups/pkglist.current`**
+__Try to populate from `/var/backups/pkglist.current`__
 
 ## Features
 
