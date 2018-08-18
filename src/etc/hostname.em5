@@ -1,0 +1,2 @@
+description "MGMT interface"
+dhcp

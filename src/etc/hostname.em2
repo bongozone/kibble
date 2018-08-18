@@ -1,0 +1,5 @@
+description "Mac Mini"
+group lan
+group bridge
+group bulk
+up

@@ -1,0 +1,8 @@
+description "Bridged LAN"
+add vether0
+add em1
+add em2
+add em3
+add em4
+up
+group lan

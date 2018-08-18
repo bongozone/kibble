@@ -1,0 +1,6 @@
+dhcpd_flags=vether0
+multicast=YES # Reject IPv4 multicast packets by default
+ntpd_flags=-s
+pkg_scripts=miniupnpd arpwatch
+vmd_flags=
+arpwatch_flags="-i vether0"
