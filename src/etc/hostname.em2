@@ -2,4 +2,5 @@ description "Mac Mini"
 group lan
 group bridge
 group bulk
+group trusted
 up
