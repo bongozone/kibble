@@ -53,3 +53,17 @@ TODO
 * [vedetta](https://github.com/vedetta-com/vedetta) - OpenBSD Router Boilerplate
 * [FQ-CoDel and pf](https://www.reddit.com/r/openbsd/comments/75ps6h/fqcodel_and_pf/) - Flows queue discpline for `pf`
 * [Fixing bufferbloat on your home network with OpenBSD 6.2 or newer](https://pauladamsmith.com/blog/2018/07/fixing-bufferbloat-on-your-home-network-with-openbsd-6.2-or-newer.html)
+
+
+<!--
+
+Updating files -- mount the root file system in ./mnt using sshfs
+
+sshfs -o sshfs_debug -o reconnect root@kibble.bongo.zone:/ mnt/kibble
+
+Copy over updated files only:
+
+rsync -v --existing mnt/etc/* src/etc
+
+
+-->
