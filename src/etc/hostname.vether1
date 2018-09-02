@@ -1,4 +1,4 @@
 description "LAN for bridge1"
-inet 192.168.43.1 255.255.255.0 192.168.1.255
+inet 10.70.145.225 255.255.255.224 10.70.145.255
 group lan
 group untrusted

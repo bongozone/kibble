@@ -1,7 +1,9 @@
-arpwatch_flags="-i vether1"
+arpwatch_flags="-i vether0"
+bgpd_flags=
 dhcpd_flags="vether0 vether1"
 httpd_flags=
 multicast=YES
 ntpd_flags=-s
 pkg_scripts=miniupnpd arpwatch
+rebound_flags="-c /etc/resolv.conf.tail"
 vmd_flags=

@@ -1,4 +1,4 @@
-# [kibble.bongo.zone](https://kibble.bongo.zone/)
+# [kibble.bongo.zone](http://kibble.bongo.zone/)
 My OpenBSD gateway configuration, connected to [NYCMesh](https://nycmesh.net). Intended as a how-to guide, in case I ever break this thing.
 
 * [dmesg](http://dmesgd.nycbug.org/index.cgi?do=view&id=3701)
