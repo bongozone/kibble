@@ -5,5 +5,5 @@ httpd_flags=
 multicast=YES
 ntpd_flags=-s
 pkg_scripts=miniupnpd arpwatch
-rebound_flags="-c /etc/resolv.conf.tail"
+slowcgi_flags=
 vmd_flags=
