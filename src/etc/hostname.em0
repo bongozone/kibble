@@ -4,8 +4,9 @@ group nycmesh
 #dest 10.70.131.129
 #inet alias 192.168.1.1 255.255.255.0
 #!ifconfig em0 add 192.168.1.1 255.255.255.0 192.168.1.255
-dhcp
+#dhcp
 
 # BGP peering network
-inet alias 10.70.130.139/31
-!route add -net 10.70.145.0/24 127.0.0.1 -reject
+#inet alias 10.70.130.139/31
+#!route add -net 10.70.145.0/24 127.0.0.1 -reject
+up

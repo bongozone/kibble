@@ -9,30 +9,33 @@ My OpenBSD gateway configuration, connected to [NYCMesh](https://nycmesh.net). I
 I connect to NYCMesh [Node 1340](https://docs.nycmesh.net/nodes/node-1340/).
 
 ```
-     NYCMesh     +----------------------------------------+
-        ^        |kibble.bongo.zone                       |
-        |        |----------------------------------------|
-        |        |bridge 0                       1        |
-+-------+------+ |      +--+--+--+--+---------+ +-------+ |
-| nycmesh 1340 | |      |  |  |  |  |         | |       | |
-+-------+------+ |      +  +  +  +  +         + +       + |
-        |        |em 0  1  2  3  4  5  vether 0 1  vlan 0 |
-        |        +------+--+----------------------------+-+
-   +----+----+ 1Gbps |  |  |                            |
-   | antenna +-------+  |  |                            |
-   +---------+          |  |                            |
-                        |  |                            |
-   +---------+ 100Mbps  |  |  VLAN tag for public SSID  |
-   + airport +----------+-------------------------------+
-   +-+-- --+-+             |
-     |     |               |
-     |     v               |
-     v    Private WiFi     |
-   Public     ^            |
-    WiFi      |            |
-         +----+----+ 1Gbps |
-         | macmini +-------+
-         +---------+
+                       +--------------------------------------------------+
+                       | kibble.bongo.zone                                |
+                       |--------------------------------------------------|
+           NYCMesh     |                                     2            |
+              ^        |                                  +-------------+ |
+              |        |                                  |  1          | |
+              |        |      bridge 0                 +----------+     | |
+      +-------+------+ |      +--+--+--+--+---------+----------------+  | |
+      | nycmesh 1340 | |      |  |  |  |  |         |  |  |       |  |  | |
+      +-------+------+ |      +  +  +  +  +         +  +  +       +  +  | |
+              |        |em 0  1  2  3  4  5  vether 0  1  2  vlan 0  1  2 |
+              |        +------+--+--------------------------------+--+--+-+
++-------------+----+ 1Gbps |  |  |                                [  [  [
+| nycmesh-lbe-1659 +-------+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%~~%
++------------------+          |  |                                [ VLAN tags
+                              |  |                                ] 1: antenna admin
+         +---------+ 100Mbps  |  |  VLAN tag for public SSID      [ 2: egress traffic
+         + airport +----------+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+         +-+-- --+-+             |
+           |     |               |
+           |     v               |
+           v    Private WiFi     |
+         Public     ^            |
+          WiFi      |            |
+               +----+----+ 1Gbps |
+               | macmini +-------+
+               +---------+
 ```
 <!-- http://www.asciidraw.com/ -->
 
@@ -44,11 +47,13 @@ I connect to NYCMesh [Node 1340](https://docs.nycmesh.net/nodes/node-1340/).
 ### Install packages with `pkg_add` 
 
 ```bash
-pkg_add alpine arpwatch bash coreutils curl git go iperf3 irssi keybase lynx \
-    miniupnpd nmap rsync the_silver_searcher tmux-mem-cpu-load vim w3m wget zsh
+pkg_add aalpine arping arpwatch bash bsd-airtools coreutils curl git go hping \
+  iperf3 irssi keybase lynx miniupnpd mosh nmap pkglocatedb rsync rtl-sdr \
+  the_silver_searcher tmux-mem-cpu-load vim vmm-firmware w3m wget zsh
 ```
-
-_Try to populate from `/var/backups/pkglist.current`_
+<!--
+Try to populate from `pkg_info -m | cut -d ' ' -f 1| sed 's/-[1234567890].*//'`
+-->
 
 ## Features
 
@@ -65,11 +70,12 @@ TODO
 
 Updating files -- mount the root file system in ./mnt using sshfs
 
-sshfs -o sshfs_debug -o reconnect root@kibble.bongo.zone:/ mnt/kibble
+sshfs -o sshfs_debug -o reconnect root@kibble.bongo.zone:/ ~/mnt/kibble
 
 Copy over updated files only:
 
 rsync -v --existing mnt/etc/* src/etc
+rsync -v --existing mnt/var/* src/var
 
 
 -->

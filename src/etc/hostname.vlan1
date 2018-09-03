@@ -1,0 +1,6 @@
+description "nycmesh-lbe-1659 mgmt VLAN"
+parent em0 vnetid 2 
+group lan
+group trusted
+group bridge
+up

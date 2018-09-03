@@ -1,0 +1,5 @@
+description "Bridged WAN"
+group wan
+add vether2
+add vlan2
+up
