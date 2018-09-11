@@ -1,12 +1,3 @@
-description "NYCMesh 1340"
-group nycmesh
-#inet 199.167.59.73 255.255.255.255 NONE
-#dest 10.70.131.129
-#inet alias 192.168.1.1 255.255.255.0
-#!ifconfig em0 add 192.168.1.1 255.255.255.0 192.168.1.255
-#dhcp
-
-# BGP peering network
-#inet alias 10.70.130.139/31
-#!route add -net 10.70.145.0/24 127.0.0.1 -reject
+description "nycmesh-lbe-1659"
+group trunk
 up
