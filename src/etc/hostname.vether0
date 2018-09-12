@@ -1,4 +1,4 @@
 description "LAN for bridge0"
-inet 192.168.42.1 255.255.255.0 192.168.1.255
+inet 10.70.145.1 255.255.255.192 10.70.145.63
 group lan
 group trusted
