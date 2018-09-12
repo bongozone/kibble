@@ -6,4 +6,5 @@ multicast=YES
 ntpd_flags=-s
 pkg_scripts=miniupnpd arpwatch
 slowcgi_flags=
+unbound_flags=
 vmd_flags=
