@@ -1,10 +1,11 @@
+pkg_scripts=miniupnpd arpwatch sshguard
 arpwatch_flags="-i vether0"
 bgpd_flags=
 dhcpd_flags="vether0 vether1"
 httpd_flags=
 multicast=YES
 ntpd_flags=-s
-pkg_scripts=miniupnpd arpwatch
 slowcgi_flags=
+sshguard_flags=-l /var/log/authlog -p 1800  -s 7200 -w 68.175.125.234/16 -w 10.70.145.0/26
 unbound_flags=
 vmd_flags=

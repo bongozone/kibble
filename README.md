@@ -47,9 +47,9 @@ DE/CIX<--+ NYCMesh     |                                  |  1          | |
 ### Install packages with `pkg_add` 
 
 ```bash
-pkg_add aalpine arping arpwatch bash bsd-airtools coreutils curl git go hping \
-  iperf3 irssi keybase lynx miniupnpd mosh nmap pkglocatedb rsync rtl-sdr \
-  the_silver_searcher tmux-mem-cpu-load vim vmm-firmware w3m wget zsh
+pkg_add alpine arping arpwatch bash bsd-airtools coreutils curl git gmake go hping htop intel-firmware \
+ iperf3 irssi keybase lynx miniupnpd mosh nmap pkglocatedb py-pip quirks rsync rtl-sdr sshguard \
+ the_silver_searcher tmux-mem-cpu-load urtwn-firmware vim vmm-firmware w3m wget zsh
 ```
 <!--
 Try to populate from `pkg_info -m | cut -d ' ' -f 1| sed 's/-[1234567890].*//'`
