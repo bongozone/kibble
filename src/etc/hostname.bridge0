@@ -9,5 +9,4 @@ add em3
 add em4
 add em5
 add vlan1
-rule block on em1 src 28:37:37:3f:5:4c
 up
