@@ -1,3 +1,4 @@
 group lan
-group bridge
+group bridged
+group trusted
 up

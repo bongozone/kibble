@@ -1,4 +1,5 @@
 description "nycmesh-lbe-1659 WAN VLAN"
 group nycmesh
+group bridged
 parent em0 vnetid 3
 up

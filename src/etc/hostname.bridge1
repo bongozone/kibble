@@ -1,6 +1,7 @@
 description "Bridged LAN (Untrusted)"
 group lan
 group untrusted
+group bridge
 add vether1
 add vlan0
 up

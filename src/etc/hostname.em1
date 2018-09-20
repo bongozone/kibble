@@ -1,6 +1,7 @@
 description "Apple Airport Express"
 group wifi
 group lan
-group bridge
+group bridged
+group trunk
 group trusted
 up

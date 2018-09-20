@@ -4,5 +4,5 @@ parent em1 vnetid 1003
 group lan
 group untrusted
 group bulk
-group bridge
+group bridged
 up
