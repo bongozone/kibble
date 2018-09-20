@@ -1,4 +1,4 @@
-# [kibble.bongo.zone](http://kibble.bongo.zone/)
+# [kibble.bongo.zone](https://kibble.bongo.zone/)
 My OpenBSD gateway configuration, connected to [NYCMesh](https://nycmesh.net). Intended as a how-to guide, in case I ever break this thing.
 
 * [dmesg](http://dmesgd.nycbug.org/index.cgi?do=view&id=3701)
@@ -20,22 +20,22 @@ DE/CIX<--+ NYCMesh     |                                  |  1          | |
       +-------+------+ |      |  |  |  |  |         |  |  |       |  |  | |
       | nycmesh 1340 | |      +  +  +  +  +         +  +  +       +  +  | |
       +-------+------+ |em 0  1  2  3  4  5  vether 0  1  2  vlan 0  1  2 |
-              |        +------+--+--------------------------------+--+--+-+
-+-------------+----+ 1Gbps |  |  |                                [  [  [
-| nycmesh-lbe-1659 +-------+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%~~%
-+------------------+          |  |                                [ VLAN tags
-                              |  |                                ] 1: antenna admin
-         +---------+ 100Mbps  |  |  VLAN tag for public SSID      [ 2: egress traffic
+              |        +------+--+--+-----------------------------+--+--+-+
++-------------+----+ 1Gbps |  |  |  |                             [  [  [
+| nycmesh-lbe-1659 +-------+~~~~~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%~~%
++------------------+          |  |  |                             [ VLAN tags
+                              |  |  |                             ] 1: antenna admin
+         +---------+ 100Mbps  |  |  |    VLAN tag for public SSID [ 2: egress traffic
          + airport +----------+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-         +-+-- --+-+             |
-           |     |               |
-           |     v               |
-           v    Private WiFi     |
-         Public     ^            |
-          WiFi      |            |
-               +----+----+ 1Gbps |
-               | macmini +-------+
-               +---------+
+         +-+-- --+-+             |  |
+           |     |               |  |
+           |     v               |  |
+           v    802.11n (private)|  |       802.11ac (private)
+         Public     ^            |  |           ^
+          WiFi      |            |  |           |
+               +----+----+ 1Gbps |  | 1Gbps +---+----+
+               | macmini +-------+  +-------+ belkin |
+               +---------+                  +--------+
 ```
 <!-- http://www.asciidraw.com/ -->
 
