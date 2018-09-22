@@ -9,5 +9,6 @@ add em3
 add em4
 add em5
 add vlan1
-rule block on vether0 src 28:37:37:3f:5:4c arp request spa 10.70.145.50 tpa 10.70.145.50 
+# Try to stop the Airport express from sending weird arps
+rule block on em1 src 28:37:37:3f:5:4c arp spa 10.70.145.50
 up
