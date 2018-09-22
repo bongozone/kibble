@@ -1,0 +1,5 @@
+description "LAN for bridge3"
+inet 10.70.145.193 255.255.255.192 10.70.145.223
+group lan
+group trusted
+group bridged

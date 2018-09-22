@@ -1,0 +1,6 @@
+description "vmd service bridge"
+group lan
+group trusted
+group bridge
+add vether3
+up
