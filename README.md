@@ -30,7 +30,7 @@ DE/CIX<--+ NYCMesh     |                                 2+----------------+ | +
          +-+-- --+-+             |  |
            |     |               |  |
            |     v               |  |
-           v    802.11n (private)|  |       802.11ac (private)
+           v    802.11a/n+b/g/n  |  |       802.11ac/n+n
          Public     ^            |  |           ^
           WiFi      |            |  |           |
                +----+----+ 1Gbps |  | 1Gbps +---+----+

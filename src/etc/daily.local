@@ -1,1 +1,4 @@
 acme-client kibble.bongo.zone && rcctl reload httpd
+
+echo "Checking wd0c"
+/sbin/atactl /dev/wd0c smartstatus >/dev/null
