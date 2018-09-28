@@ -1,0 +1,3 @@
+description "Admin VPN"
+group trusted
+up
