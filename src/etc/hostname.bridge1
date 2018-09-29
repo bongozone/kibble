@@ -4,5 +4,5 @@ group untrusted
 group bridge
 add vether1
 add vlan0
-stp vlan1
+stp vlan0
 up
