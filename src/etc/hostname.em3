@@ -1,3 +1,4 @@
+description "Belkin AP"
 group lan
 group bridged
 group trusted

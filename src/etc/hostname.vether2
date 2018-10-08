@@ -1,10 +1,9 @@
 description "for bridge2"
 group nycmesh
 group bridged
-#!ifconfig em0 add 192.168.1.1 255.255.255.0 192.168.1.255
+!route add -net 10.70.145.0/24 127.0.0.1 -reject -priority 30 # try putting this earlier to see if it fixes lightbeam
 inet 199.167.59.73 255.255.255.255 NONE
 dest 10.70.131.129
 
 # BGP peering network
 inet alias 10.70.130.139/31
-!route add -net 10.70.145.0/24 127.0.0.1 -reject

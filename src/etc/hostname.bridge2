@@ -3,5 +3,4 @@ group wan
 group bridge
 add vether2
 add vlan2
-stp vlan2
 up
