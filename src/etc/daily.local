@@ -5,3 +5,4 @@ echo "Checking sd0c"
 
 echo "Looking for Syspatches"
 /usr/sbin/syspatch -c
+ROOTBACKUP=1
