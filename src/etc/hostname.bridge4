@@ -1,0 +1,4 @@
+description "vmd test bridge"
+group lan
+group bridge
+up
