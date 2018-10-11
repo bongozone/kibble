@@ -1,7 +1,7 @@
 acme-client kibble.bongo.zone && rcctl reload httpd
 
-echo "Checking sd0c"
-/sbin/atactl sd0c smartstatus
+echo "Checking disks"
+for i in /dev/[ws]d*c; do  txt=$(/sbin/atactl "$i" smartstatus 2> /dev/null) && echo "$i": "$txt"; done
 
 echo "Looking for Syspatches"
 /usr/sbin/syspatch -c
