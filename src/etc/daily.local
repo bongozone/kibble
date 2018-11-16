@@ -1,4 +1,6 @@
-acme-client kibble.bongo.zone && rcctl reload httpd
+echo "Refreshing LetsEncrypt Cert"
+acme-client kibble.bongo.zone && rcctl reload httpd && echo "Updated cert; httpd restarted" || echo "Nothing needed to be done."
+echo
 
 echo "Checking disks"
 for i in /dev/[ws]d*c; do  txt=$(/sbin/atactl "$i" smartstatus 2> /dev/null) && echo "$i": "$txt"; done
