@@ -11,4 +11,7 @@ add em5
 add vlan1
 # Try to stop the Airport express from sending weird arps
 rule block on em1 src 28:37:37:3f:5:4c arp spa 10.70.145.50
+# Block STP from Belkin
+#blocknonip em3
+#link1 # Block non-IP multicast
 up
