@@ -2,7 +2,6 @@
 My OpenBSD gateway configuration, connected to [NYCMesh](https://nycmesh.net). Intended as a how-to guide, in case I ever break this thing.
 
 * [dmesg](http://dmesgd.nycbug.org/index.cgi?do=view&id=3701)
-* [Todo items](https://github.com/bongozone/kibble/issues)
 
 ## Network configuration
 
