@@ -61,7 +61,7 @@ smtpd.conf	type=file mode=0644 uname=root gname=wheel
 spamd.conf	type=file mode=0644 uname=root gname=wheel optional
 ..	#mail
 mtree		type=dir mode=0755 uname=root gname=wheel
-special		type=file mode=0644 uname=root gname=wheel
+special		type=file mode=0600 uname=root gname=wheel
 ..	#mtree
 moduli		type=file mode=0644 uname=root gname=wheel
 netstart	type=file mode=0644 uname=root gname=wheel
