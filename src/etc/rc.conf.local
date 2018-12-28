@@ -8,6 +8,7 @@ ntpd_flags=-s
 pkg_scripts=miniupnpd arpwatch sshguard
 relayd_flags=
 slowcgi_flags=
+snmpd_flags=
 sshguard_flags=-l /var/log/authlog -p 1800 -s 7200 -w 68.175.125.234/16 -w 10.70.145.0/24 -b 80:/var/db/sshguard/blacklist.db
 syslogd_flags=-u
 unbound_flags=
