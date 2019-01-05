@@ -10,4 +10,4 @@ cd6844955f21dab6.j /usr/src ffs rw,nodev,nosuid,softdep,noatime 1 2
 cd6844955f21dab6.e /var ffs rw,nodev,nosuid,softdep,noatime 1 2
 swap               /var/run mfs rw,nodev,nosuid,-s=16M,-P=/var/run 0 0
 6ba08f38bd616529.a /altroot ffs xx 0 0
-6ba08f38bd616529.b /snapshots ffs rw,nodev,noexec,softdep,noatime,noperm,nosuid 0 2
+6ba08f38bd616529.b /snapshots ffs rw,nodev,noexec,softdep,noatime,noperm,nosuid,noauto 0 2
