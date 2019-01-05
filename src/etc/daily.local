@@ -1,10 +1,11 @@
-echo "Refreshing LetsEncrypt Cert"
+next_part "Refreshing LetsEncrypt Cert"
 acme-client kibble.bongo.zone && rcctl reload httpd && echo "Updated cert; httpd restarted" || echo "Nothing needed to be done."
-echo
 
-echo "Checking disks"
+next_part "Checking SMART status for disks"
 for i in /dev/[ws]d*c; do  txt=$(/sbin/atactl "$i" smartstatus 2> /dev/null) && echo "$i": "$txt"; done
 
-echo "Looking for Syspatches"
+next_part "Looking for Syspatches"
 /usr/sbin/syspatch -c
+
 ROOTBACKUP=1
+SUIDSKIP="/snapshots"
