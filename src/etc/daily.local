@@ -7,5 +7,5 @@ for i in /dev/[ws]d*c; do  txt=$(/sbin/atactl "$i" smartstatus 2> /dev/null) && 
 next_part "Looking for Syspatches"
 /usr/sbin/syspatch -c
 
-ROOTBACKUP=1
+#ROOTBACKUP=1
 SUIDSKIP="/snapshots"
