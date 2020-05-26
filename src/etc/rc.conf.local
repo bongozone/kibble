@@ -1,5 +1,6 @@
+#bgpd_flags=-v
+apmd_flags=
 arpwatch_flags="-i vether0"
-bgpd_flags=-v
 dhcpd_flags="vether0 vether1 vether3"
 hotplugd_flags=
 httpd_flags=

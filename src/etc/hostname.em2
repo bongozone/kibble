@@ -1,4 +1,4 @@
-description "Mac Mini"
+description "Airport"
 group lan
 group bridged
 group bulk
